@@ -1,10 +1,9 @@
-import { Button } from 'antd';
+import { UserButton } from '@clerk/nextjs';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Homepage</h1>
-      <Button type="primary">button</Button>
+    <div className="flex items-center flex-col gap-10 h-screen">
+      <UserButton />
     </div>
   );
 }
