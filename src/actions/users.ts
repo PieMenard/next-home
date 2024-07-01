@@ -29,7 +29,7 @@ export const GetCurrentUserFromMongoDb = async () => {
         //in case of no last name
         username = username?.replace('null', '');
 
-        const newUser = {
+        const newUser: any = {
             clerkUserId: clerkUser?.id,
             username,
             email: clerkUser?.emailAddresses[0].emailAddress,
