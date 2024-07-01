@@ -1,7 +1,9 @@
+import { GetCurrentUserFromMongoDb } from '@/actions/users';
 import { UserButton } from '@clerk/nextjs';
 import { currentUser } from '@clerk/nextjs/server';
 
-export default async function asyncHome() {
+export default async function Home() {
+  await GetCurrentUserFromMongoDb();
   const loggedInUser = await currentUser();
 
   let username = loggedInUser?.username;
