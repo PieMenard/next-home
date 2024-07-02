@@ -33,9 +33,7 @@ const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
 
   const getContent = () => {
     if (isPublicRoute) return children;
-    {
-      loading && <Loader />;
-    }
+    if (loading) return <Loader />;
     return <div className="py-5 lg:px-20 px-5">{children}</div>;
   };
 
