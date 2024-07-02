@@ -1,6 +1,7 @@
 'use client';
 
 import { GetCurrentUserFromMongoDb } from '@/actions/users';
+import Loader from '@/components/loader';
 import { UserButton } from '@clerk/nextjs';
 import { User } from '@prisma/client';
 import { usePathname } from 'next/navigation';
@@ -8,6 +9,7 @@ import { useEffect, useState } from 'react';
 
 const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
   const [currentUserData, setCurrentUserData] = useState<User | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const pathname = usePathname();
 
@@ -31,16 +33,24 @@ const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
 
   const getContent = () => {
     if (isPublicRoute) return children;
+    {
+      loading && <Loader />;
+    }
     return <div className="py-5 lg:px-20 px-5">{children}</div>;
   };
 
   const getCurrentUser = async () => {
     try {
+      setLoading(true);
       const response: any = await GetCurrentUserFromMongoDb();
       if (response.error) throw new Error(response.error.message);
       setCurrentUserData(response.data);
     } catch (error: any) {
-      //   message.error(error.message);
+      return {
+        message: 'Could not retrieve user',
+      };
+    } finally {
+      setLoading(false);
     }
   };
 
