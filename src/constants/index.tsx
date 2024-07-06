@@ -11,3 +11,15 @@ export const propertyStatus = [
   { value: 'rent', label: 'Rent' },
   { value: 'sale', label: 'Sale' },
 ];
+
+export const cities = [
+  { value: 'cochabamba', label: 'Cochabamba' },
+  { value: 'beni', label: 'Beni' },
+  { value: 'la_paz', label: 'La Paz' },
+  { value: 'pando', label: 'Pando' },
+  { value: 'potosi', label: 'Potosí' },
+  { value: 'santacruz', label: 'Santa Cruz' },
+  { value: 'sucre', label: 'Sucre' },
+  { value: 'tarija', label: 'Tarija' },
+  { value: 'oruro', label: 'Oruro' },
+];
