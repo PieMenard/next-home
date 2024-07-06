@@ -23,3 +23,26 @@ export const cities = [
   { value: 'tarija', label: 'Tarija' },
   { value: 'oruro', label: 'Oruro' },
 ];
+
+export const parkingTypes = [
+  { value: 'covered', label: 'Covered' },
+  { value: 'open', label: 'Open' },
+  { value: 'none', label: 'None' },
+];
+
+export const furnishingTypes = [
+  { value: 'furnished', label: 'Furnished' },
+  { value: 'semi-furnished', label: 'Semi-furnished' },
+  { value: 'unfurnished', label: 'Unfurnished' },
+];
+
+export const facingTypes = [
+  { value: 'north', label: 'North' },
+  { value: 'south', label: 'South' },
+  { value: 'west', label: 'West' },
+  { value: 'east', label: 'East' },
+  { value: 'north-east', label: 'North-East' },
+  { value: 'north-west', label: 'North-West' },
+  { value: 'south-east', label: 'South-East' },
+  { value: 'south-west', label: 'South-west' },
+];

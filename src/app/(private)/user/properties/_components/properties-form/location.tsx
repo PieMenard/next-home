@@ -14,7 +14,11 @@ const Location = ({
   };
 
   return (
-    <Form onFinish={onFinish} layout="vertical">
+    <Form
+      onFinish={onFinish}
+      layout="vertical"
+      initialValues={finalValues.location}
+    >
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         <Form.Item
           name="city"
