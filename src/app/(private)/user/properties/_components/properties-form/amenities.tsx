@@ -1,4 +1,4 @@
-import { Button, Form, Input, InputNumber, Select } from 'antd';
+import { Button, Form, InputNumber, Select } from 'antd';
 import { PropertiesFormStepProps } from '.';
 import { facingTypes, parkingTypes, furnishingTypes } from '@/constants';
 
@@ -76,7 +76,7 @@ const Amenities = ({
             { required: true, message: 'Please input the number of floors!' },
           ]}
         >
-          <InputNumber className="w-full" placeholder="50" />
+          <InputNumber className="w-full" placeholder="1" />
         </Form.Item>
         <Form.Item
           name="facing"
