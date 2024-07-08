@@ -1,4 +1,4 @@
-import { Button, Form, Input, InputNumber, Select, Upload } from 'antd';
+import { Button, Upload } from 'antd';
 import { PropertiesFormStepProps } from '.';
 import { useState } from 'react';
 
